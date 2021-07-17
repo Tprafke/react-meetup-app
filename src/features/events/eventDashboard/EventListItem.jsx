@@ -60,7 +60,7 @@ export default function EventListItem({ event }) {
         <Button
           as={Link}
           to={`/events/${event.id}`}
-          color='teal'
+          color='orange'
           floated='right'
           content='View'
         />

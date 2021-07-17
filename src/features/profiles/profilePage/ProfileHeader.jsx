@@ -101,7 +101,7 @@ export default function ProfileHeader({ profile, isCurrentUser }) {
                 <Reveal.Content visible style={{ width: "100%" }}>
                   <Button
                     fluid
-                    color='teal'
+                    color='orange'
                     content={followingUser ? "Following" : "Not following"}
                   />
                 </Reveal.Content>

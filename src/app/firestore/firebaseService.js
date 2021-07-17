@@ -79,7 +79,7 @@ export function addEventChatComment(eventId, values) {
     uid: user.uid,
     text: values.comment,
     date: Date.now(),
-    parentId: values.parentId
+    parentId: values.parentId,
   };
   return firebase.database().ref(`chat/${eventId}`).push(newComment);
 }
@@ -90,5 +90,10 @@ export function getEventChatRef(eventId) {
 
 export function getUserFeedRef() {
   const user = firebase.auth().currentUser;
-  return firebase.database().ref(`posts/${user.uid}`).orderByKey().limitToLast(5)
+
+  return firebase
+    .database()
+    .ref(`posts/${user.uid}`)
+    .orderByKey()
+    .limitToLast(5);
 }

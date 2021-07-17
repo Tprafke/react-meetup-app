@@ -11,7 +11,7 @@ export default function EventDetailedInfo({ event }) {
       <Segment attached='top'>
         <Grid>
           <Grid.Column width={1}>
-            <Icon size='large' color='teal' name='info' />
+            <Icon size='large' color='orange' name='info' />
           </Grid.Column>
           <Grid.Column width={15}>
             <p>{event.description}</p>
@@ -21,7 +21,7 @@ export default function EventDetailedInfo({ event }) {
       <Segment attached>
         <Grid verticalAlign='middle'>
           <Grid.Column width={1}>
-            <Icon name='calendar' size='large' color='teal' />
+            <Icon name='calendar' size='large' color='orange' />
           </Grid.Column>
           <Grid.Column width={15}>
             <span>{format(event.date, "MMMM d, yyyy h:mm a")}</span>
@@ -31,7 +31,7 @@ export default function EventDetailedInfo({ event }) {
       <Segment attached>
         <Grid verticalAlign='middle'>
           <Grid.Column width={1}>
-            <Icon name='marker' size='large' color='teal' />
+            <Icon name='marker' size='large' color='orange' />
           </Grid.Column>
           <Grid.Column width={11}>
             <span>{event.venue.address}</span>
@@ -39,7 +39,7 @@ export default function EventDetailedInfo({ event }) {
           <Grid.Column width={4}>
             <Button
               onClick={() => setMapOpenToggle(!mapOpen)}
-              color='teal'
+              color='orange'
               size='tiny'
               content={mapOpen ? "Hide map" : "Show map"}
             />

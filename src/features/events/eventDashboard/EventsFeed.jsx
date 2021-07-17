@@ -12,6 +12,7 @@ import EventFeedItem from "./EventFeedItem";
 export default function EventsFeed() {
   const dispatch = useDispatch();
   const { feed } = useSelector((state) => state.profile);
+  const { authenticated } = useSelector((state) => state.auth);
 
   useEffect(() => {
     getUserFeedRef().on("value", (snapshot) => {
@@ -21,6 +22,7 @@ export default function EventsFeed() {
       const feed = firebaseObjectToArray(snapshot.val()).reverse();
       dispatch(listenToFeed(feed));
     });
+
     return () => {
       getUserFeedRef().off();
     };
@@ -28,14 +30,23 @@ export default function EventsFeed() {
 
   return (
     <>
-      <Header attached color='teal' icon='newspaper' content='News feed' />
-      <Segment attached='bottom'>
-        <Feed>
-          {feed.map((post) => (
-            <EventFeedItem post={post} key={post.id} />
-          ))}
-        </Feed>
-      </Segment>
+      {authenticated && (
+        <>
+          <Header
+            attached
+            color='orange'
+            icon='newspaper'
+            content='News feed'
+          />
+          <Segment attached='bottom'>
+            <Feed>
+              {feed.map((post) => (
+                <EventFeedItem post={post} key={post.id} />
+              ))}
+            </Feed>
+          </Segment>
+        </>
+      )}
     </>
   );
 }

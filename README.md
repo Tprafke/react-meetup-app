@@ -15,3 +15,18 @@ EventFire is an events centered social media app created using React and Firebas
 <img align="left" alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />
 <img align="left" alt="CSS3" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />
 <img align="left" alt="NPM" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/npm/npm.png" />
+
+<br/>
+
+## Features
+
+<ul>
+<li> Firebase backend - Authentication, Firestore, Firebase realtime database, Firebase Storage, and firebase cloud functions.</li>
+<li> Authentication - Email & password, and OAuth via Google and Facebook providers. </li>
+<li> Google Maps Integration </li>
+<li> Photo Upload </li>
+<li> Live Chat System </li>
+<li> Infinite Scroll & Pagination </li>
+<li> Formik Forms </li>
+<li> Semantic UI Library </li>
+</ul>
